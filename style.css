@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color: #1da1f2;
+}
+
+#quote-box{
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#text{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+    color: #1da1f2;
+}
+
+#text-before{
+    font-family: "Big Shoulders Text", sans-serif;
+    color: #1da1f2;
+    font-size: 2rem;
+}
+
+#author{
+    text-align: right;
+    margin-right: 5%;
+    color: #1da1f2;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+#tweet-quote{
+    display: inline-block;
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 15px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#new-quote{
+    display: inline-block;
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 16px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+}
+
+#creater{
+    color: #fff;
+}

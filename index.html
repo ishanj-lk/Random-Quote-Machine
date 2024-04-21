@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Machine</title>
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-color-change">
+    <div id="quote-box">
+        <h1 id="text" class="color-change"><span id="text-before" class="color-change"><i class="fa-solid fa-quote-left"></i></span> Whatever you can do, or dream you can, begin it. Boldness has genius, power and magic in it.</h1>
+        <p id="author" class="color-change">- Johann Wolfgang von Goethe</p>
+        <a href="twitter.com/intent/tweet" id="tweet-quote" class="bg-color-change"><i class="fa-brands fa-twitter"></i></a>
+        <button id="new-quote" class="bg-color-change">New Quote</button>
+    </div>
+    <p id="creater">by Ishan Jayasinghe</p>
+
+    <script>
+        $(document).ready(function() {
+            // Get a new quote
+            function getQuote() {
+                $.ajax({
+                    url: 'https://api.quotable.io/random',
+                    success: function(data) {
+                        $('#text').html('<span id="text-before" class="color-change"><i class="fa-solid fa-quote-left"></i></span>' +" "+ data.content);
+                        $('#author').text("- "+data.author);
+                        $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + data.content + '" ' + data.author));
+
+                        const color = 'rgb(' + Math.floor(Math.random() * 128) + ',' + Math.floor(Math.random() * 128) + ',' + Math.floor(Math.random() * 128) + ')';
+                        $('.color-change').css('color', color);
+                        $('.bg-color-change').css('background-color', color);
+                    }
+                });
+            }
+
+            // Get a new quote when the page loads
+            getQuote();
+
+            // Get a new quote when the button is clicked
+            $('#new-quote').on('click', getQuote);
+        });
+    </script>
+</body>
+</html>
