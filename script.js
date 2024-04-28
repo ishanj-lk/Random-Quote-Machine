@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+    //Update copyright year
+    let year = new Date().getFullYear();
+    $('#creator').text('Created with ❤️ by Ishan Jayasinghe ©️ ' + year + '.');
     // Get a new quote
     function getQuote() {
         $('body').fadeOut(500).fadeIn(500);
