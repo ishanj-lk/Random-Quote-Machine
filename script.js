@@ -1,6 +1,7 @@
 $(document).ready(function() {
     // Get a new quote
     function getQuote() {
+        $('body').fadeOut(500).fadeIn(500);
         $.ajax({
             url: 'https://api.quotable.io/random',
             success: function(data) {

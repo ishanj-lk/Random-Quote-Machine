@@ -2,6 +2,12 @@
 
 This app generates inspiring and thought-provoking quotes from a collection of famous personalities throughout history .
 
+<p float="left">
+  <img src="./img/ss1.jpg" width="200"/>
+  <img src="./img/ss2.jpg" width="200" /> 
+  <img src="./img/ss3.jpg" width="200" />
+</p>
+
 ## Features
 
 * Wide Range of Quotes: Access a diverse selection of quotes from various categories, including motivational, philosophical, humorous, and more.
